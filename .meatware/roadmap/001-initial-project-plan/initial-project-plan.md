@@ -11,7 +11,7 @@
 1. [Repository Overview](#repository-overview)
 2. [Directory Structure](#directory-structure)
 3. [File Descriptions](#file-descriptions)
-4. [Implementation Phases](#implementation-phases)
+4. [Implementation Milestones](#implementation-milestones)
 5. [Contributing Guidelines](#contributing-guidelines)
 
 ---
@@ -723,9 +723,9 @@ scripts/
 
 ---
 
-## Implementation Phases
+## Implementation Milestones
 
-### Phase 1: Core Foundation (v0.0.0)
+### Milestone 1: Core Foundation (v0.0.0)
 
 > Priority: 🔴 Critical
 
@@ -739,7 +739,7 @@ scripts/
 | Basic Commands    | `core/.../command/claim/*`, `command/party/*`                | ⬜ Not Started |
 | Configuration     | `core/.../config/*`                                          | ⬜ Not Started |
 
-### Phase 2: Trust System (v0.1.0)
+### Milestone 2: Trust System (v0.1.0)
 
 > Priority: 🔴 Critical
 
@@ -749,7 +749,7 @@ scripts/
 | Trust Commands      | `core/.../command/trust/*`                    | ⬜ Not Started |
 | Permission Resolver | `core/.../permission/PermissionResolver.java` | ⬜ Not Started |
 
-### Phase 3: Protection Flags (v0.2.0)
+### Milestone 3: Protection Flags (v0.2.0)
 
 > Priority: 🔴 Critical
 
@@ -760,7 +760,7 @@ scripts/
 | Flag Commands  | `core/.../command/flag/*`               | ⬜ Not Started |
 | Flag GUI       | `core/.../gui/claim/ClaimFlagsGui.java` | ⬜ Not Started |
 
-### Phase 4: Visualization (v0.3.0)
+### Milestone 4: Visualization (v0.3.0)
 
 > Priority: 🔴 Critical
 
@@ -770,7 +770,7 @@ scripts/
 | Claim Inspector    | `core/.../visualization/inspection/*` | ⬜ Not Started |
 | World Map          | `core/.../visualization/map/*`        | ⬜ Not Started |
 
-### Phase 5: Claim Earning (v0.4.0)
+### Milestone 5: Claim Earning (v0.4.0)
 
 > Priority: 🟡 Medium
 
@@ -780,7 +780,7 @@ scripts/
 | Earning Sources | `core/.../earning/source/*`               | ⬜ Not Started |
 | Bonus System    | `core/.../earning/bonus/*`                | ⬜ Not Started |
 
-### Phase 6: Claim Expiration (v0.5.0)
+### Milestone 6: Claim Expiration (v0.5.0)
 
 > Priority: 🟡 Medium
 
@@ -790,7 +790,7 @@ scripts/
 | Warning System       | Part of expiration                               | ⬜ Not Started |
 | Admin Expire Command | `core/.../command/admin/AdminExpireCommand.java` | ⬜ Not Started |
 
-### Phase 7: Teleportation (v0.6.0)
+### Milestone 7: Teleportation (v0.6.0)
 
 > Priority: 🟡 Medium
 
@@ -800,7 +800,7 @@ scripts/
 | Warmup/Cooldown   | `core/.../teleport/warmup/*`  | ⬜ Not Started |
 | Teleport Commands | `core/.../teleport/command/*` | ⬜ Not Started |
 
-### Phase 8: Subclaims (v0.7.0)
+### Milestone 8: Subclaims (v0.7.0)
 
 > Priority: 🟡 Medium
 
@@ -809,7 +809,7 @@ scripts/
 | Subclaim System   | `core/.../claim/subclaim/*`   | ⬜ Not Started |
 | Subclaim Commands | `core/.../command/subclaim/*` | ⬜ Not Started |
 
-### Phase 9: Party Relations (v0.8.0)
+### Milestone 9: Party Relations (v0.8.0)
 
 > Priority: 🟡 Medium
 
@@ -819,7 +819,7 @@ scripts/
 | Party Chat        | `core/.../party/chat/*`                  | ⬜ Not Started |
 | Relation Commands | `core/.../command/party/PartyAlly*.java` | ⬜ Not Started |
 
-### Phase 10: Activity Logging (v0.9.0)
+### Milestone 10: Activity Logging (v0.9.0)
 
 > Priority: 🟢 Low
 
@@ -829,7 +829,7 @@ scripts/
 | Query System    | `core/.../logging/query/*`    | ⬜ Not Started |
 | Rollback System | `core/.../logging/rollback/*` | ⬜ Not Started |
 
-### Phase 11: Economy Integration (v0.10.0)
+### Milestone 11: Economy Integration (v0.10.0)
 
 > Priority: 🟢 Low
 
@@ -838,7 +838,7 @@ scripts/
 | Economy Manager | `core/.../economy/*`      | ⬜ Not Started |
 | Claim Shop      | `core/.../economy/shop/*` | ⬜ Not Started |
 
-### Phase 12: Advanced Features (v1.0.0)
+### Milestone 12: Advanced Features (v1.0.0)
 
 > Priority: 🟢 Future
 
@@ -894,19 +894,19 @@ docs(api): add event documentation
 
 ### Issue Labels
 
-| Label                          | Description               |
-| ------------------------------ | ------------------------- |
-| `priority: critical`           | Must be fixed immediately |
-| `priority: high`               | Important, fix soon       |
-| `priority: medium`             | Should be done            |
-| `priority: low`                | Nice to have              |
-| `type: bug`                    | Something isn't working   |
-| `type: feature`                | New feature request       |
-| `type: enhancement`            | Improvement to existing   |
-| `type: documentation`          | Documentation only        |
-| `status: help wanted`          | Open for contribution     |
-| `status: good first issue`     | Good for newcomers        |
-| `phase: 1` through `phase: 12` | Implementation phase      |
+| Label                                  | Description               |
+| -------------------------------------- | ------------------------- |
+| `priority: critical`                   | Must be fixed immediately |
+| `priority: high`                       | Important, fix soon       |
+| `priority: medium`                     | Should be done            |
+| `priority: low`                        | Nice to have              |
+| `type: bug`                            | Something isn't working   |
+| `type: feature`                        | New feature request       |
+| `type: enhancement`                    | Improvement to existing   |
+| `type: documentation`                  | Documentation only        |
+| `status: help wanted`                  | Open for contribution     |
+| `status: good first issue`             | Good for newcomers        |
+| `milestone: 1` through `milestone: 12` | Implementation milestone  |
 
 ---
 

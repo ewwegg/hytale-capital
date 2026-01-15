@@ -2,7 +2,7 @@
 # Lists all projects and their milestones with current status
 
 active_project: "001-initial-project-plan"
-active_milestone: "01-"
+active_milestone: "01-core-foundation"
 
 github:
   project_owner: "ewwegg"
