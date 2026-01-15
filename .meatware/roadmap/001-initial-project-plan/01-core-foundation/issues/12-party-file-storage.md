@@ -33,6 +33,7 @@ Persists all parties to a JSON file. Integrates with PartyManager to load on sta
 ## Technical Constraints
 
 - **Member Serialization**: Include playerId, role, joinedAt for each member
+- **ADR-0001**: Follow single file storage pattern. See [ADR-0001](.meatware/adr/0001-claim-storage-format.md)
 
 ## Workflow
 
@@ -48,7 +49,7 @@ Persists all parties to a JSON file. Integrates with PartyManager to load on sta
 
 ## Resources
 
-- [JsonStorage base implementation](./6-json-storage-base.md)
-- [PartyManager implementation](./10-party-manager.md)
+- [ADR-0001: Claim Storage Format](.meatware/adr/0001-claim-storage-format.md) — Single file storage pattern (applied to parties)
+- [ADR-0003: Party-Claim Relationship](.meatware/adr/0003-party-claim-relationship.md)
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — JSON serialization patterns
 - [Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual) — Server data file locations

@@ -30,6 +30,10 @@ Technical Debt line included only for `feat`, `fix`, `refactor`, and `perf` comm
 
 ## [Unreleased]
 
+- [2601151931-fix-absolute-paths-issue-links](./2601-changelog/2601151931-fix-absolute-paths-issue-links.md)
+  - **Git Comment**: docs(roadmap): fix absolute paths in issue markdown links
+  - **Changed**: Updated cross-reference links in issue files to use absolute paths
+
 - [2601151910-add-adrs-milestone-artifacts](./2601-changelog/2601151910-add-adrs-milestone-artifacts.md)
   - **Git Comment**: docs(planning): add adrs and milestone artifacts for core foundation
   - **Changed**: Added project guidance, 4 ADRs, and Core Foundation milestone artifacts

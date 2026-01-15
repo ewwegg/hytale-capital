@@ -30,8 +30,9 @@ Protects containers (chests, barrels, etc.) from unauthorized access in claimed 
 
 ## Technical Constraints
 
-- **Spike Finding**: Container access via `UseBlockEvent.Pre` on container block types. See [spike-hytale-event-api](../spikes/spike-hytale-event-api.md)
+- **Spike Finding**: Container access via `UseBlockEvent.Pre` on container block types. See [spike-hytale-event-api](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-event-api.md)
 - **Block Detection**: Need to identify which blocks are containers (may require block type registry or hardcoded list)
+- **ADR-0002**: Convert block coordinates to ChunkCoordinate. See [ADR-0002](.meatware/adr/0002-chunk-coordinate-handling.md)
 
 ## Workflow
 
@@ -50,7 +51,7 @@ Protects containers (chests, barrels, etc.) from unauthorized access in claimed 
 
 ## Resources
 
-- [Spike: Hytale Event API](../spikes/spike-hytale-event-api.md)
-- [ProtectionManager implementation](./13-protection-manager.md)
+- [Spike: Hytale Event API](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-event-api.md)
+- [ADR-0002: Chunk Coordinate Handling](.meatware/adr/0002-chunk-coordinate-handling.md)
 - [HytaleDocs - Events](https://hytale-docs.com/docs/api/server-internals/events) — UseBlockEvent.Pre reference
 - [HytaleModding.dev - Creating Events](https://hytalemodding.dev/en/docs/guides/plugin/creating-events) — ECS event patterns

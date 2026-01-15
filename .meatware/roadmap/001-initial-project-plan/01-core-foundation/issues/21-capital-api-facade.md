@@ -33,6 +33,8 @@ Single entry point for external mods to access Capital functionality. Simplifies
 
 - **Singleton**: Single API instance for plugin lifecycle
 - **Initialization**: Set during plugin setup(), cleared during shutdown()
+- **Spike Finding**: Follow lifecycle hooks pattern. See [spike-plugin-lifecycle-hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
+- **ADR-0004**: Semantic versioning only. See [ADR-0004](.meatware/adr/0004-api-versioning-strategy.md)
 
 ## Workflow
 
@@ -50,6 +52,6 @@ Single entry point for external mods to access Capital functionality. Simplifies
 
 ## Resources
 
-- [API interfaces](./20-api-interfaces.md)
-- [ADR-0004: API Versioning Strategy](../../../../adr/0004-api-versioning-strategy.md)
+- [ADR-0004: API Versioning Strategy](.meatware/adr/0004-api-versioning-strategy.md)
+- [Spike: Plugin Lifecycle Hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Plugin API exposure patterns

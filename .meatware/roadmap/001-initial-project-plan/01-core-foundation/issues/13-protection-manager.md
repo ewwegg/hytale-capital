@@ -31,7 +31,8 @@ Central permission checking for all protection events. Consolidates the "can thi
 
 ## Technical Constraints
 
-- **ADR-0003**: Owner-only access in v0; no party or trust checks. See [ADR-0003](../../../../adr/0003-party-claim-relationship.md)
+- **ADR-0003**: Owner-only access in v0; no party or trust checks. See [ADR-0003](.meatware/adr/0003-party-claim-relationship.md)
+- **ADR-0002**: Uses ChunkCoordinate for location checks. See [ADR-0002](.meatware/adr/0002-chunk-coordinate-handling.md)
 - **Performance**: O(1) lookup via ClaimCache
 
 ## Workflow
@@ -51,7 +52,7 @@ Central permission checking for all protection events. Consolidates the "can thi
 
 ## Resources
 
-- [ADR-0003: Party-Claim Relationship](../../../../adr/0003-party-claim-relationship.md)
-- [ClaimManager/ClaimCache implementation](./5-claim-manager-cache.md)
-- [Spike: Hytale Event API](../spikes/spike-hytale-event-api.md) — Event system for protection checks
+- [ADR-0003: Party-Claim Relationship](.meatware/adr/0003-party-claim-relationship.md)
+- [ADR-0002: Chunk Coordinate Handling](.meatware/adr/0002-chunk-coordinate-handling.md)
+- [Spike: Hytale Event API](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-event-api.md)
 - [HytaleDocs - Events](https://hytale-docs.com/docs/api/server-internals/events) — Event API reference

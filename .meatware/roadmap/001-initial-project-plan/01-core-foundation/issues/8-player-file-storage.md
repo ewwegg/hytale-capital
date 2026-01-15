@@ -31,6 +31,7 @@ Persists per-player data such as claim block balance and settings. Uses the Json
 ## Technical Constraints
 
 - **Default Values**: New players start with configured claim block amount (from CapitalConfig when available)
+- **ADR-0001**: Follow single file storage pattern. See [ADR-0001](.meatware/adr/0001-claim-storage-format.md)
 
 ## Workflow
 
@@ -47,6 +48,6 @@ Persists per-player data such as claim block balance and settings. Uses the Json
 
 ## Resources
 
-- [JsonStorage base implementation](./6-json-storage-base.md)
+- [ADR-0001: Claim Storage Format](.meatware/adr/0001-claim-storage-format.md) — Single file storage pattern
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Player data persistence patterns
 - [Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual) — Server data file locations

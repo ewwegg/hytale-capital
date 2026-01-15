@@ -30,7 +30,7 @@ The main plugin class that Hytale loads. Establishes lifecycle hooks for initial
 
 ## Technical Constraints
 
-- **Spike Finding**: Use lifecycle methods `preLoad()`, `setup()`, `start()`, `shutdown()` per [spike-plugin-lifecycle-hooks](../spikes/spike-plugin-lifecycle-hooks.md)
+- **Spike Finding**: Use lifecycle methods `preLoad()`, `setup()`, `start()`, `shutdown()` per [spike-plugin-lifecycle-hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
 - **Constructor**: Must accept `JavaPluginInit` parameter
 
 ## Workflow
@@ -49,7 +49,7 @@ The main plugin class that Hytale loads. Establishes lifecycle hooks for initial
 
 ## Resources
 
-- [Spike: Plugin Lifecycle Hooks](../spikes/spike-plugin-lifecycle-hooks.md)
+- [Spike: Plugin Lifecycle Hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
 - [HytaleDocs - Plugin Lifecycle](https://hytale-docs.com/docs/modding/plugins/plugin-lifecycle)
 - [Britakee's GitBook - Plugin Basics](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Comprehensive plugin tutorials
 - [HytaleModding.dev - Creating Plugins](https://hytalemodding.dev/en/docs/guides/plugin) — Community plugin guide

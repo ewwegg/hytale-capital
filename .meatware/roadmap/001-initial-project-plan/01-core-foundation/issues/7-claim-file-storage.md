@@ -32,7 +32,8 @@ Persists all claims to a single JSON file. Integrates with ClaimManager to load 
 
 ## Technical Constraints
 
-- **ADR-0001**: Single claims.json file, not per-world or per-chunk. See [ADR-0001](../../../../adr/0001-claim-storage-format.md)
+- **ADR-0001**: Single claims.json file, not per-world or per-chunk. See [ADR-0001](.meatware/adr/0001-claim-storage-format.md)
+- **ADR-0002**: ChunkCoordinate serialized as {world, x, z}. See [ADR-0002](.meatware/adr/0002-chunk-coordinate-handling.md)
 - **UUID Serialization**: Store UUIDs as strings
 
 ## Workflow
@@ -51,7 +52,7 @@ Persists all claims to a single JSON file. Integrates with ClaimManager to load 
 
 ## Resources
 
-- [ADR-0001: Claim Storage Format](../../../../adr/0001-claim-storage-format.md)
-- [JsonStorage base implementation](./6-json-storage-base.md)
+- [ADR-0001: Claim Storage Format](.meatware/adr/0001-claim-storage-format.md)
+- [ADR-0002: Chunk Coordinate Handling](.meatware/adr/0002-chunk-coordinate-handling.md)
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — JSON serialization patterns
 - [Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual) — Server data file locations

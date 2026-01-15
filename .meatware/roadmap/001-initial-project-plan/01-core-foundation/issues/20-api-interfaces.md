@@ -33,8 +33,9 @@ Public interfaces in the API module for external mod integration. Allows other m
 
 ## Technical Constraints
 
-- **ADR-0004**: Semantic versioning only; no version in package names. See [ADR-0004](../../../../adr/0004-api-versioning-strategy.md)
+- **ADR-0004**: Semantic versioning only; no version in package names. See [ADR-0004](.meatware/adr/0004-api-versioning-strategy.md)
 - **Stability**: API should be minimal; only expose what external mods need
+- **ADR-0002**: API uses ChunkCoordinate for location parameters. See [ADR-0002](.meatware/adr/0002-chunk-coordinate-handling.md)
 
 ## Workflow
 
@@ -52,7 +53,7 @@ Public interfaces in the API module for external mod integration. Allows other m
 
 ## Resources
 
-- [ADR-0004: API Versioning Strategy](../../../../adr/0004-api-versioning-strategy.md)
-- [ClaimManager implementation](./5-claim-manager-cache.md)
-- [PartyManager implementation](./10-party-manager.md)
+- [ADR-0004: API Versioning Strategy](.meatware/adr/0004-api-versioning-strategy.md)
+- [ADR-0002: Chunk Coordinate Handling](.meatware/adr/0002-chunk-coordinate-handling.md)
+- [ADR-0003: Party-Claim Relationship](.meatware/adr/0003-party-claim-relationship.md)
 - [HytaleDocs - API Patterns](https://hytale-docs.com/docs/api) — Hytale API design conventions

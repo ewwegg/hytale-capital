@@ -45,8 +45,9 @@ Player-facing commands for party management. Grouped together as they share comm
 
 ## Technical Constraints
 
-- **Spike Finding**: Use `AbstractPlayerCommand` pattern. Consider `AbstractCommandCollection` for grouping under `/party`. See [spike-hytale-command-registration](../spikes/spike-hytale-command-registration.md)
+- **Spike Finding**: Use `AbstractPlayerCommand` pattern. Consider `AbstractCommandCollection` for grouping under `/party`. See [spike-hytale-command-registration](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-command-registration.md)
 - **Role Checks**: Officers can invite/kick members; only owner can disband
+- **ADR-0003**: Party system independent of claim ownership in v0. See [ADR-0003](.meatware/adr/0003-party-claim-relationship.md)
 
 ## Workflow
 
@@ -65,9 +66,8 @@ Player-facing commands for party management. Grouped together as they share comm
 
 ## Resources
 
-- [Spike: Hytale Command Registration](../spikes/spike-hytale-command-registration.md)
-- [PartyManager implementation](./10-party-manager.md)
-- [InviteManager implementation](./11-invite-manager.md)
+- [Spike: Hytale Command Registration](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-command-registration.md)
+- [ADR-0003: Party-Claim Relationship](.meatware/adr/0003-party-claim-relationship.md)
 - [HytaleDocs - Commands](https://hytale-docs.pages.dev/modding/plugins/commands/) — Command API and AbstractCommandCollection
 - [HytaleModding.dev - Creating Commands](https://hytalemodding.dev/en/docs/guides/plugin/creating-commands) — Command patterns and argument types
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Command implementation tutorials

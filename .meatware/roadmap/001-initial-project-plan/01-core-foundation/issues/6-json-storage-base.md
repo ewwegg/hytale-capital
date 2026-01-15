@@ -31,8 +31,9 @@ Reusable foundation for all JSON file persistence. Provides file I/O, Gson seria
 
 ## Technical Constraints
 
-- **Spike Finding**: Initialize in `setup()`, persist final state in `shutdown()` per [spike-plugin-lifecycle-hooks](../spikes/spike-plugin-lifecycle-hooks.md)
-- **Gson**: Use Gson for JSON serialization with pretty printing for human readability
+- **Spike Finding**: Initialize in `setup()`, persist final state in `shutdown()` per [spike-plugin-lifecycle-hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
+- **ADR-0001**: Single file format for claims; same pattern for other storage. See [ADR-0001](.meatware/adr/0001-claim-storage-format.md)
+- **Gson**: Use Gson 2.10.1 for JSON serialization with pretty printing for human readability
 
 ## Workflow
 
@@ -51,7 +52,7 @@ Reusable foundation for all JSON file persistence. Provides file I/O, Gson seria
 
 ## Resources
 
-- [Spike: Plugin Lifecycle Hooks](../spikes/spike-plugin-lifecycle-hooks.md)
-- [ADR-0001: Claim Storage Format](../../../../adr/0001-claim-storage-format.md)
+- [Spike: Plugin Lifecycle Hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
+- [ADR-0001: Claim Storage Format](.meatware/adr/0001-claim-storage-format.md)
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — File I/O patterns and plugin data storage
 - [Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual) — Server file locations and data paths

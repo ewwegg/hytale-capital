@@ -30,7 +30,8 @@ Central claim management with O(1) chunk lookup. ClaimManager handles CRUD opera
 
 ## Technical Constraints
 
-- **ADR-0002**: Use ChunkCoordinate as cache key. See [ADR-0002](../../../../adr/0002-chunk-coordinate-handling.md)
+- **ADR-0002**: Use ChunkCoordinate as cache key. See [ADR-0002](.meatware/adr/0002-chunk-coordinate-handling.md)
+- **ADR-0003**: Claims linked to player UUID. See [ADR-0003](.meatware/adr/0003-party-claim-relationship.md)
 - **Thread Safety**: Methods should be safe for concurrent access (consider synchronization or concurrent collections)
 
 ## Workflow
@@ -49,6 +50,7 @@ Central claim management with O(1) chunk lookup. ClaimManager handles CRUD opera
 
 ## Resources
 
-- [ADR-0002: Chunk Coordinate Handling](../../../../adr/0002-chunk-coordinate-handling.md)
-- [Milestone Analysis - Dependency Graph](../milestone-analysis.md)
+- [ADR-0002: Chunk Coordinate Handling](.meatware/adr/0002-chunk-coordinate-handling.md)
+- [ADR-0003: Party-Claim Relationship](.meatware/adr/0003-party-claim-relationship.md)
+- [Milestone Analysis](.meatware/roadmap/001-initial-project-plan/01-core-foundation/milestone-analysis.md)
 - [HytaleDocs - World API](https://hytale-docs.com/docs/api/server-internals) — World and chunk systems
