@@ -1,0 +1,20 @@
+# Roadmap Index
+# Lists all projects and their milestones with current status
+
+active_project: "001-initial-project-plan"
+active_milestone: "01-"
+
+github:
+  project_owner: "ewwegg"
+  status_field: "Status" # Optional, defaults to "Status"
+  backlog_value: "Backlog" # Optional, defaults to "Backlog"
+
+projects:
+  - id: "001-initial-project-plan"
+    name: "Initial Project Plan"
+    github_title: "Hytale Capital - Initial Project Plan"
+    status: "active"
+    description: "tba"
+    plan: "001-initial-project-plan/initial-project-plan.md"
+
+    milestones:

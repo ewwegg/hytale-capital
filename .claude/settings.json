@@ -1,0 +1,20 @@
+{
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true"
+  },
+  "permissions": {
+    "allow": [
+      "mcp__github__search_repositories",
+      "mcp__github__get_teams",
+      "mcp__github__get_file_contents",
+      "mcp__github__list_issues",
+      "mcp__github__list_projects",
+      "mcp__github__list_project_fields",
+      "mcp__github__list_project_items",
+      "mcp__github__update_project_item",
+      "mcp__github__get_label",
+      "mcp__github__issue_write",
+      "mcp__github__add_project_item"
+    ]
+  }
+}
