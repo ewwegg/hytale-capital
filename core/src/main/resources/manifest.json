@@ -1,0 +1,9 @@
+{
+  "id": "capital",
+  "name": "Capital",
+  "version": "0.0.1-SNAPSHOT",
+  "description": "Land claiming and protection plugin for Hytale servers",
+  "entryPoint": "dev.ewwegg.capital.core.Capital",
+  "authors": ["ewwegg"],
+  "dependencies": []
+}

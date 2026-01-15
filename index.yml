@@ -1,0 +1,195 @@
+# Capital Project Index
+
+project:
+  name: Capital
+  description: Land claiming and protection plugin for Hytale
+  status: planning
+  package: dev.ewwegg.capital
+
+root:
+  CLAUDE.md: Claude Code guidance
+  README.md: Project overview
+  LICENSE: MIT License
+  potential-names.md: Name brainstorming
+
+.claude:
+  description: Claude Code configuration
+  settings.json: Claude settings
+  settings.local.json: Local overrides
+  commands/:
+    description: Custom Claude commands
+    git/:
+      commit.md: Git commit command
+    meatware/:
+      milestone-analysis.md: Milestone analysis command
+      milestone-decisions.md: Milestone decisions command
+      milestone-resolution.md: Milestone resolution command
+      milestone-issues.md: Milestone issues command
+      issue-add.md: Add issue command
+      issue-ready.md: Mark issue ready command
+    prime/:
+      codebase.md: Codebase understanding command
+  docs/:
+    description: Claude implementation documentation
+    claude-agents-implementation.md: Agent implementation guide
+    claude-commands-implementation.md: Command implementation guide
+    claude-workflow-template.md: Workflow templates
+    claude-writing-patterns.md: Writing patterns
+
+.meatware:
+  description: Planning workflow artifacts
+  README.md: Meatware workflow overview
+  temporary-notes.md: Scratch notes
+
+  adr/:
+    description: Architecture Decision Records
+    README.md: ADR index
+    0001-claim-storage-format.md: Claim storage decision
+    0002-chunk-coordinate-handling.md: Chunk coordinate decision
+    0003-party-claim-relationship.md: Party-claim relationship decision
+    0004-api-versioning-strategy.md: API versioning decision
+
+  changelog/:
+    description: Project changelogs
+    CHANGELOG.md: Main changelog
+    2601-changelog/:
+      description: January 2026 changelog entries
+      2601151910-add-adrs-milestone-artifacts.md: Add ADRs entry
+      2601151931-fix-absolute-paths-issue-links.md: Fix paths entry
+      2601151952-enhance-issue-documentation-resources.md: Enhance docs entry
+
+  references/:
+    description: Reference documentation
+    tech-stack.md: Technology stack details
+    development-philosophy.md: Development principles
+    planning-workflow.md: Planning process
+    writing-spec.md: Documentation style guide
+
+    development/:
+      conventions.md: Development conventions
+
+    templates/:
+      description: Document templates
+      adr-template.md: ADR template
+      issue-template.md: Issue template
+      milestone-analysis-template.md: Milestone analysis template
+      milestone-decisions-template.md: Milestone decisions template
+      milestone-resolution-template.md: Milestone resolution template
+      spike-template.md: Spike template
+
+  roadmap/:
+    description: Project roadmap
+    index.yml: Roadmap index
+
+    001-initial-project-plan/:
+      description: Initial project plan
+      initial-project-plan.md: Project plan document
+
+      01-core-foundation/:
+        description: Core Foundation milestone
+        milestone-analysis.md: Milestone analysis
+        milestone-decisions.md: Milestone decisions
+        milestone-resolution.md: Milestone resolution
+
+        issues/:
+          description: Milestone issues
+          1-gradle-multi-module-setup.md: Gradle setup
+          2-plugin-entry-point.md: Plugin entry
+          3-chunk-coordinate-record.md: Chunk coordinates
+          4-claim-data-class.md: Claim data
+          5-claim-manager-cache.md: Claim manager
+          6-json-storage-base.md: Storage base
+          7-claim-file-storage.md: Claim storage
+          8-player-file-storage.md: Player storage
+          9-party-data-classes.md: Party data
+          10-party-manager.md: Party manager
+          11-invite-manager.md: Invite manager
+          12-party-file-storage.md: Party storage
+          13-protection-manager.md: Protection manager
+          14-block-protection-listeners.md: Block listeners
+          15-container-listener.md: Container listener
+          16-entity-damage-listener.md: Entity listener
+          17-claim-commands.md: Claim commands
+          18-party-commands.md: Party commands
+          19-config-manager.md: Config manager
+          20-api-interfaces.md: API interfaces
+          21-capital-api-facade.md: API facade
+
+        spikes/:
+          description: Research spikes
+          spike-hytale-command-registration.md: Command registration spike
+          spike-hytale-event-api.md: Event API spike
+          spike-plugin-lifecycle-hooks.md: Plugin lifecycle spike
+
+modules:
+  api/:
+    description: Public API module (planned)
+    status: not_implemented
+    purpose: Public interfaces for mod integration
+
+  core/:
+    description: Main implementation (planned)
+    status: not_implemented
+    purpose: Core plugin logic
+
+  resources/:
+    description: Assets and resources (planned)
+    status: not_implemented
+    purpose: UI, textures, sounds, localization
+
+  docs/:
+    description: User documentation (planned)
+    status: not_implemented
+    purpose: User, admin, and developer guides
+
+tech_stack:
+  language: Java 25 LTS
+  build: Gradle 9.2.0
+  build_dsl: Kotlin DSL
+  testing: JUnit Jupiter 5.10.x
+  platform: Hytale Server
+  package_root: dev.ewwegg.capital
+
+development:
+  philosophy:
+    - Working beats perfect
+    - Simple beats flexible
+    - Conventional beats clever
+    - Explicit beats abstract
+    - Reversible beats optimal
+
+  workflow:
+    project: 1-2 months (4-8 milestones)
+    milestone: 1 week (10-20 issues)
+    issue: 2-4 hours
+
+  commit_format: Conventional Commits v1.0.0
+  license: MIT
+
+architecture:
+  core_systems:
+    - ClaimManager: Chunk-based spatial claim lookup
+    - PartyManager: Player groups with roles
+    - PermissionManager: Trust levels and flags
+    - ProtectionManager: Event-driven protection
+    - StorageManager: JSON file storage
+
+  patterns:
+    - Server-side only
+    - ECS-aligned design
+    - Event-driven protection
+
+milestones:
+  current: 01-core-foundation
+  planned:
+    - 02-trust-system
+    - 03-protection-flags
+    - 04-visualization
+    - 05-claim-earning
+    - 06-claim-expiration
+    - 07-teleportation
+    - 08-subclaims
+    - 09-party-relations
+    - 10-activity-logging
+    - 11-economy-integration
+    - 12-advanced-features

@@ -146,7 +146,7 @@ issue_body: Full GitHub issue content
       - Start with "Comment by Agent:"
       - Work completed (bullet points, no "Summary:" heading)
       - Errors encountered (if any)
-      - Decisions made during implementation
+      - Decisions made during implementation (REQUIRED: each decision MUST include 1-3 sentence justification explaining why that choice was made)
       - Scope changes (if any)
       - Files created or modified
       - NO emojis, NO meta-commentary ("I completed...", "In summary...")

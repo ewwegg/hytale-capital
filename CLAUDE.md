@@ -1,10 +1,10 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Project
 
-## Project Overview
+Capital - land claiming and protection plugin for Hytale servers
 
-Capital is a land claiming and protection plugin for Hytale servers. It's currently in the planning phase with no source code yet implemented.
+**Status**: Planning phase, no source code implemented
 
 ## Tech Stack
 
@@ -22,79 +22,81 @@ Capital is a land claiming and protection plugin for Hytale servers. It's curren
 ./gradlew clean build    # Clean rebuild
 ```
 
-## Project Structure
+## Structure
 
-This is a multi-module Gradle project:
-- `api/` - Public API module for other mods to integrate
-- `core/` - Main plugin implementation
+Multi-module Gradle project:
+- `api/` - Public API for other mods
+- `core/` - Main implementation
 - `resources/` - UI assets, textures, sounds, localization
-- `docs/` - User, admin, and developer documentation
+- `docs/` - Documentation
+- `.meatware/` - Planning workflow (ADRs, milestones, issues)
+- `.claude/` - Claude Code configuration and commands
 
-Plugin package: `dev.ewwegg.capital`
+Package: `dev.ewwegg.capital`
 
-## Development Philosophy
+## Philosophy
 
-Read `.meatware/references/development-philosophy.md` for the full philosophy. Key principles in priority order:
-
+Principles (priority order):
 1. **Working beats perfect** - Functional today over flawless eventually
 2. **Simple beats flexible** - Solve current problems, not hypothetical ones
 3. **Conventional beats clever** - Standard patterns, obvious code
 4. **Explicit beats abstract** - Clear duplication beats obscure abstraction
 5. **Reversible beats optimal** - Easy to undo beats difficult to change
 
-### AI Agent Instructions
-
-- When scope is uncertain, implement the minimal interpretation
-- Match existing project conventions before introducing new patterns
-- When requirements are ambiguous, ask before building
-- When simplicity conflicts with completeness, state the tradeoff
+AI agent rules:
+- Implement minimal interpretation when scope is uncertain
+- Match existing conventions before introducing new patterns
+- Ask before building when requirements are ambiguous
+- State tradeoffs when simplicity conflicts with completeness
 - Build what's requested, not what might be useful
 
-## Planning Workflow (Meatware)
+Full philosophy: `.meatware/references/development-philosophy.md`
 
-This project uses a structured planning workflow documented in `.meatware/`:
+## Planning Workflow
 
+Structure:
 - **Project**: 1-2 months (4-8 milestones)
 - **Milestone**: 1 week (10-20 issues)
 - **Issue**: 2-4 hours
 
-### Claude Commands for Planning
+## Commands
 
+Planning:
 - `/meatware:milestone-analysis [project] [milestone]` - Analyze milestone scope
-- `/meatware:milestone-decisions [project] [milestone]` - Execute spikes and create ADRs
-- `/meatware:milestone-resolution [project] [milestone]` - Decompose issues and distribute work
+- `/meatware:milestone-decisions [project] [milestone]` - Execute spikes, create ADRs
+- `/meatware:milestone-resolution [project] [milestone]` - Decompose issues, distribute work
 - `/meatware:milestone-issues [project] [milestone]` - Review and refine issues
 
-### Other Commands
+Other:
+- `/git:commit [message] [--amend]` - Create changelog, stage, commit (Conventional Commits)
+- `/prime:codebase` - Gain general codebase understanding
 
-- `/git:commit [message] [--amend]` - Create changelog, stage, and commit with Conventional Commits format
-- `/prime:codebase` - Gain general understanding of the codebase
+## Commits
 
-## Commit Convention
-
-Follow Conventional Commits v1.0.0:
+Conventional Commits v1.0.0:
 - Format: `type(scope): description`
 - Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `revert`
-- Description: imperative mood, lowercase, no period, under 72 characters
+- Description: imperative, lowercase, no period, max 72 chars
 
-## Key Reference Documents
+## References
 
-- `.meatware/references/tech-stack.md` - Full technology stack details
+- `.meatware/references/tech-stack.md` - Technology stack
 - `.meatware/references/development-philosophy.md` - Development principles
-- `.meatware/references/planning-workflow.md` - Planning process documentation
-- `.meatware/roadmap/001-initial-project-plan/initial-project-plan.md` - Detailed project structure and milestones
-- `plan.md` - Repository structure and implementation phases
+- `.meatware/references/planning-workflow.md` - Planning process
+- `.meatware/references/writing-spec.md` - Documentation style
+- `.meatware/roadmap/001-initial-project-plan/initial-project-plan.md` - Project plan
+- `.meatware/adr/` - Architecture Decision Records
 
-## Architecture (Planned)
+## Architecture
 
 Core systems:
-- **ClaimManager** - Central claim management with chunk-based spatial lookup
-- **PartyManager** - Player groups with roles (Owner, Officer, Member, Trusted, Visitor)
+- **ClaimManager** - Claim management with chunk-based spatial lookup
+- **PartyManager** - Player groups with roles
 - **PermissionManager** - Trust levels and flag-based protection
-- **ProtectionManager** - Event listeners for block/entity/player protection
-- **StorageManager** - JSON file storage (database backends planned for v1.0)
+- **ProtectionManager** - Event listeners for protection
+- **StorageManager** - JSON file storage (database planned for v1.0)
 
-Key patterns:
-- Server-side only (Hytale downloads assets to clients automatically)
-- ECS-aligned design for game object management
-- Event-driven protection with listeners for all interaction types
+Patterns:
+- Server-side only (Hytale auto-downloads assets to clients)
+- ECS-aligned design
+- Event-driven protection

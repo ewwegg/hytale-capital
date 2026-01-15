@@ -30,6 +30,11 @@ Technical Debt line included only for `feat`, `fix`, `refactor`, and `perf` comm
 
 ## [Unreleased]
 
+- [2601152322-initialize-project-foundation](./2601-changelog/2601152322-initialize-project-foundation.md)
+  - **Git Comment**: feat(foundation): initialize project structure and build system
+  - **Added**: Gradle multi-module project, plugin foundation, API stubs, milestone structure
+  - **Technical Debt**: Version adjustments from spec, Hytale API stubs pending official SDK
+
 - [2601151952-enhance-issue-documentation-resources](./2601-changelog/2601151952-enhance-issue-documentation-resources.md)
   - **Git Comment**: docs(roadmap): enhance issue documentation with resources and fix paths
   - **Changed**: Updated paths and added resource links across 21 core foundation issues

@@ -25,14 +25,13 @@ ROADMAP_INDEX: `${ROADMAP_BASE}/index.yml`
 
 ## Core Responsibilities
 
-- Parse all frontmatter fields (issue, type, label, blocked-by, responsibility, model)
-- Handle variable file naming formats (numbers, hyphens, spacing)
-- Create issues with GitHub issue type and metadata section in body
-- Match milestone by title (not number) and require exact match before proceeding
-- Match project by title (not config number) and require exact match before proceeding
+- Parse frontmatter fields: issue (title), type, label, blocked-by, responsibility, model
+- Create GitHub issues with labels from "label" field only
+- Set Projects V2 Type field (Human/Agent) from frontmatter "type" field
+- Match milestone and project by title, require exact match
 - Link dependencies using blocked-by references
-- Add to Projects V2 board in configured status
-- Report clear success/failure for each issue
+- Add to Projects V2 with Status and Type fields set
+- Report success/failure for each issue
 
 ## Workflow
 
@@ -76,12 +75,12 @@ ROADMAP_INDEX: `${ROADMAP_BASE}/index.yml`
 
 5. **Verify Projects V2** - Check board configuration (if configured)
 
-   - Use the matched project number from step 2 (not from config):
-     - Verify project exists: `gh project view {matched_number} --owner {owner} --format json`
-     - Get Status field ID: use MCP tool `mcp__github__list_project_fields`
-     - Find field matching status_field name (default "Status")
-     - Get Backlog option ID from field options matching backlog_value (default "Backlog")
-     - If project or field not found, report warning and continue without Projects V2
+   - Use matched project number from step 2
+   - List project fields: `mcp__github__projects_list` with method='list_project_fields'
+   - Extract required field IDs and option IDs:
+     - Status field: Match status_field name (default "Status"), get field ID and Backlog option ID
+     - Type field: Match name "Type", get field ID and all option IDs (Human/Agent)
+   - If project or fields not found, report warning and continue without Projects V2
 
 6. **Build file mapping** - Map issue files to track creation order
 
@@ -96,18 +95,16 @@ ROADMAP_INDEX: `${ROADMAP_BASE}/index.yml`
 
    - Extract file number from filename (e.g., "5" from "5-implement-media.md")
    - Read file using Read tool
-   - Extract frontmatter between `---` delimiters using sed/yq
-   - Parse fields: issue (title), type, label, blocked-by, responsibility, model
-   - Extract body content (everything after second `---`)
-   - Build full issue body from entire markdown file including frontmatter
-   - CRITICAL: Use MCP tool `mcp__github__issue_write` with method='create':
-     - Parameters: owner, repo, title, body (full_body), type, labels (array), milestone (numeric ID from step 4)
-     - Type parameter sets GitHub issue type (Human/Agent)
-     - Milestone must be numeric ID, not title string
-   - Capture created GitHub issue number from response
-   - **Store in mapping table: file_number → github_issue_number**
+   - Parse frontmatter: issue (title), type, label, blocked-by, responsibility, model
+   - Build issue body from entire markdown file including frontmatter
+   - Create issue: `mcp__github__issue_write` with method='create'
+     - Parameters: owner, repo, title, body, labels (array from "label" field only), milestone (numeric ID)
+     - DO NOT use type parameter (unsupported for user repos)
+     - Store frontmatter type value for setting Projects V2 Type field in step 9
+   - Capture GitHub issue number from response
+   - Store in mapping table: file_number → github_issue_number
    - Echo: "✓ Created #{github_issue_number}: {title} (from file {file_number})"
-   - On error, log error and continue with next file
+   - On error, log error and continue
 
 8. **Link dependencies** - Map file numbers to GitHub issue numbers
 
@@ -126,14 +123,13 @@ ROADMAP_INDEX: `${ROADMAP_BASE}/index.yml`
 
 9. **Add to Projects V2** - Add issues to kanban board (if configured)
 
-   If Projects V2 configured:
-
    For each created issue:
 
    - Add to project: `gh project item-add {project_number} --owner {owner} --url {issue_url} --format json`
-   - Extract item ID and project ID from JSON response
-   - Set status to Backlog: `gh project item-edit --id {item_id} --project-id {project_id} --field-id {status_field_id} --single-select-option-id {backlog_option_id}`
-   - Echo: "✓ Added #{issue_number} to project board in Backlog status"
+   - Extract item ID and project ID from response
+   - Set Status field: `gh project item-edit --id {item_id} --project-id {project_id} --field-id {status_field_id} --single-select-option-id {backlog_option_id}`
+   - Set Type field: Use type value from frontmatter (Human/Agent), match to option ID, run `gh project item-edit` with Type field ID
+   - Echo: "✓ Added #{issue_number} to project (Status: Backlog, Type: {type})"
    - On error, log warning and continue
 
 10. **Generate report** - Summarize results
