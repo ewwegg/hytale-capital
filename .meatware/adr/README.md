@@ -29,9 +29,12 @@ See `.meatware/references/templates/adr-template.md` for the standard template.
 
 _List of all ADRs in this project. Updated by `/meatware:milestone-decisions` command._
 
-| Number | Title | Status | Date |
-| ------ | ----- | ------ | ---- |
-| 0001   |       |        |      |
+| Number | Title                     | Status   | Date       |
+| ------ | ------------------------- | -------- | ---------- |
+| 0001   | Claim Storage Format      | Accepted | 2026-01-15 |
+| 0002   | Chunk Coordinate Handling | Accepted | 2026-01-15 |
+| 0003   | Party-Claim Relationship  | Accepted | 2026-01-15 |
+| 0004   | API Versioning Strategy   | Accepted | 2026-01-15 |
 
 ## References
 

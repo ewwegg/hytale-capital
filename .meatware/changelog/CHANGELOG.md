@@ -30,4 +30,8 @@ Technical Debt line included only for `feat`, `fix`, `refactor`, and `perf` comm
 
 ## [Unreleased]
 
+- [2601151910-add-adrs-milestone-artifacts](./2601-changelog/2601151910-add-adrs-milestone-artifacts.md)
+  - **Git Comment**: docs(planning): add adrs and milestone artifacts for core foundation
+  - **Changed**: Added project guidance, 4 ADRs, and Core Foundation milestone artifacts
+
 ---

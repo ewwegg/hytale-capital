@@ -44,6 +44,7 @@ Never use generic "user" for anonymous visitors. Identify which roles are releva
 - Classify every line item—leave nothing ambiguous
 - Document assumptions explicitly
 - Flag items requiring human decision before Resolution phase
+- Reference other milestones by name, not number: `(Milestone: Trust System)` not `(Milestone 2)`
 
 ## Workflow
 
