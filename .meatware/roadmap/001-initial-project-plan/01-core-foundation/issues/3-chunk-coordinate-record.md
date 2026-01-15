@@ -28,9 +28,10 @@ Immutable identifier for chunk positions used as map keys in ClaimCache. Provide
 
 ## Technical Constraints
 
-- **ADR-0002**: Use custom record, not Hytale native types. See [ADR-0002](.meatware/adr/0002-chunk-coordinate-handling.md)
-- **Conversion**: Chunk X = blockX >> 4, Chunk Z = blockZ >> 4
+- **ADR-0002**: Use custom record, not Hytale native types. See [ADR-0002](/.meatware/adr/0002-chunk-coordinate-handling.md)
+- **Conversion**: Chunk X = blockX >> 4, Chunk Z = blockZ >> 4 (16x16 chunk columns)
 - **Java Record**: Must use Java record syntax for automatic equals/hashCode
+- **World Identifier**: Use string world name for multi-world support
 
 ## Workflow
 
@@ -47,5 +48,5 @@ Immutable identifier for chunk positions used as map keys in ClaimCache. Provide
 
 ## Resources
 
-- [ADR-0002: Chunk Coordinate Handling](.meatware/adr/0002-chunk-coordinate-handling.md)
-- [HytaleDocs - World API](https://hytale-docs.com/docs/api/server-internals) — World and chunk coordinate systems
+- [ADR-0002: Chunk Coordinate Handling](/.meatware/adr/0002-chunk-coordinate-handling.md)
+- [HytaleDocs - Server Internals](https://hytale-docs.com/docs/api/server-internals) — World and chunk coordinate systems

@@ -41,9 +41,10 @@ Player-facing commands for claim management. Grouped together as they share comm
 
 ## Technical Constraints
 
-- **Spike Finding**: Use `AbstractPlayerCommand` with typed arguments via `getCommandRegistry()`. See [spike-hytale-command-registration](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-command-registration.md)
-- **Async**: Commands execute async; return `CompletableFuture<Void>`
-- **ADR-0002**: Convert player location to ChunkCoordinate. See [ADR-0002](.meatware/adr/0002-chunk-coordinate-handling.md)
+- **Spike Finding**: Use `AbstractPlayerCommand` with typed arguments via `getCommandRegistry()`. See [spike-hytale-command-registration](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-command-registration.md)
+- **Async**: Commands extend AbstractAsyncCommand; return `CompletableFuture<Void>`
+- **ADR-0002**: Convert player location to ChunkCoordinate. See [ADR-0002](/.meatware/adr/0002-chunk-coordinate-handling.md)
+- **Execute Signature**: Five parameters: CommandContext, Store<EntityStore>, Ref<EntityStore>, PlayerRef, World
 
 ## Workflow
 
@@ -62,8 +63,8 @@ Player-facing commands for claim management. Grouped together as they share comm
 
 ## Resources
 
-- [Spike: Hytale Command Registration](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-command-registration.md)
-- [ADR-0002: Chunk Coordinate Handling](.meatware/adr/0002-chunk-coordinate-handling.md)
-- [HytaleDocs - Commands](https://hytale-docs.pages.dev/modding/plugins/commands/) — Command API reference
-- [HytaleModding.dev - Creating Commands](https://hytalemodding.dev/en/docs/guides/plugin/creating-commands) — AbstractPlayerCommand patterns
+- [Spike: Hytale Command Registration](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-command-registration.md)
+- [ADR-0002: Chunk Coordinate Handling](/.meatware/adr/0002-chunk-coordinate-handling.md)
+- [HytaleDocs - Commands](https://hytale-docs.pages.dev/modding/plugins/commands/) — RequiredArg, OptionalArg, DefaultArg, FlagArg argument types
+- [HytaleModding.dev - Creating Commands](https://hytalemodding.dev/en/docs/guides/plugin/creating-commands) — AbstractPlayerCommand execute signature
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Command implementation tutorials

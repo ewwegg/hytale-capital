@@ -33,9 +33,10 @@ Event listeners that cancel block modifications in protected claims. Grouped tog
 
 ## Technical Constraints
 
-- **Spike Finding**: Use `BreakBlockEvent` and `PlaceBlockEvent` ECS events. See [spike-hytale-event-api](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-event-api.md)
-- **Cancellation**: Call `event.setCancelled(true)` to prevent action
-- **ADR-0002**: Convert block coordinates to ChunkCoordinate via `fromBlock()`. See [ADR-0002](.meatware/adr/0002-chunk-coordinate-handling.md)
+- **Spike Finding**: Use `BreakBlockEvent` and `PlaceBlockEvent` ECS events. See [spike-hytale-event-api](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-event-api.md)
+- **Cancellation**: Call `event.setCancelled(true)` to prevent action (ICancellable interface)
+- **ADR-0002**: Convert block coordinates to ChunkCoordinate via `fromBlock()`. See [ADR-0002](/.meatware/adr/0002-chunk-coordinate-handling.md)
+- **ECS Registration**: Register via `getEntityStoreRegistry().registerSystem()`
 
 ## Workflow
 
@@ -54,8 +55,8 @@ Event listeners that cancel block modifications in protected claims. Grouped tog
 
 ## Resources
 
-- [Spike: Hytale Event API](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-event-api.md)
-- [ADR-0002: Chunk Coordinate Handling](.meatware/adr/0002-chunk-coordinate-handling.md)
-- [HytaleDocs - Events](https://hytale-docs.com/docs/api/server-internals/events) — BreakBlockEvent, PlaceBlockEvent reference
-- [HytaleModding.dev - Creating Events](https://hytalemodding.dev/en/docs/guides/plugin/creating-events) — ECS event system patterns
+- [Spike: Hytale Event API](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-hytale-event-api.md)
+- [ADR-0002: Chunk Coordinate Handling](/.meatware/adr/0002-chunk-coordinate-handling.md)
+- [HytaleDocs - Events](https://hytale-docs.com/docs/api/server-internals/events) — BreakBlockEvent, PlaceBlockEvent, DamageBlockEvent
+- [HytaleModding.dev - Creating Events](https://hytalemodding.dev/en/docs/guides/plugin/creating-events) — EntityEventSystem pattern and registration
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Event listener tutorials

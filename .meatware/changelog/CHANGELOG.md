@@ -30,6 +30,10 @@ Technical Debt line included only for `feat`, `fix`, `refactor`, and `perf` comm
 
 ## [Unreleased]
 
+- [2601151952-enhance-issue-documentation-resources](./2601-changelog/2601151952-enhance-issue-documentation-resources.md)
+  - **Git Comment**: docs(roadmap): enhance issue documentation with resources and fix paths
+  - **Changed**: Updated paths and added resource links across 21 core foundation issues
+
 - [2601151931-fix-absolute-paths-issue-links](./2601-changelog/2601151931-fix-absolute-paths-issue-links.md)
   - **Git Comment**: docs(roadmap): fix absolute paths in issue markdown links
   - **Changed**: Updated cross-reference links in issue files to use absolute paths

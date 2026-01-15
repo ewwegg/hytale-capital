@@ -34,9 +34,10 @@ Central management for all party operations. Handles creation, disbanding, membe
 
 ## Technical Constraints
 
-- **ADR-0003**: Party system independent of claims in v0. See [ADR-0003](.meatware/adr/0003-party-claim-relationship.md)
+- **ADR-0003**: Party system independent of claims in v0. See [ADR-0003](/.meatware/adr/0003-party-claim-relationship.md)
 - **Ownership Transfer**: Not implemented in v0; owner leaving disbands party
-- **Max Members**: Configurable via CapitalConfig (when available)
+- **Max Members**: Configurable via CapitalConfig (default: 20)
+- **Single Party**: Each player can only belong to one party at a time
 
 ## Workflow
 
@@ -54,6 +55,7 @@ Central management for all party operations. Handles creation, disbanding, membe
 
 ## Resources
 
-- [ADR-0003: Party-Claim Relationship](.meatware/adr/0003-party-claim-relationship.md)
+- [ADR-0003: Party-Claim Relationship](/.meatware/adr/0003-party-claim-relationship.md)
 - [HytaleDocs - Server Internals](https://hytale-docs.com/docs/api/server-internals) — Manager patterns and player UUID handling
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Plugin architecture patterns
+- [Milestone Analysis](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/milestone-analysis.md) — Party system scope

@@ -31,8 +31,9 @@ Data models for the party system. A Party contains members with roles; PartyMemb
 
 ## Technical Constraints
 
-- **ADR-0003**: Party does not own claims directly; access is checked separately. See [ADR-0003](.meatware/adr/0003-party-claim-relationship.md)
+- **ADR-0003**: Party does not own claims directly; access is checked separately. See [ADR-0003](/.meatware/adr/0003-party-claim-relationship.md)
 - **Immutability**: Members list returned from getters should be unmodifiable
+- **Party Identity**: Use UUID for party ID to support persistence and lookups
 
 ## Workflow
 
@@ -48,5 +49,5 @@ Data models for the party system. A Party contains members with roles; PartyMemb
 
 ## Resources
 
-- [ADR-0003: Party-Claim Relationship](.meatware/adr/0003-party-claim-relationship.md)
-- [HytaleDocs - ECS Architecture](https://hytale-docs.com/docs/api/server-internals) — Entity Component System patterns
+- [ADR-0003: Party-Claim Relationship](/.meatware/adr/0003-party-claim-relationship.md)
+- [HytaleDocs - Server Internals](https://hytale-docs.com/docs/api/server-internals) — Entity Component System patterns

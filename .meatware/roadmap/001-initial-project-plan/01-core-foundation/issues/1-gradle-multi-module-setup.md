@@ -51,7 +51,8 @@ None - this is the first issue.
 
 ## Resources
 
-- [Tech Stack Reference](.meatware/references/tech-stack.md)
+- [Tech Stack Reference](/.meatware/references/tech-stack.md)
 - [Britakee's Template Plugin](https://github.com/realBritakee/hytale-template-plugin) — Ready-to-use plugin template with Gradle setup and CI/CD
 - [HytaleModding.dev - Plugin Setup](https://hytalemodding.dev/en/docs/guides/plugin) — Community guide for project structure
 - [Gradle Multi-Module Documentation](https://docs.gradle.org/current/userguide/multi_project_builds.html)
+- [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Comprehensive plugin development tutorials

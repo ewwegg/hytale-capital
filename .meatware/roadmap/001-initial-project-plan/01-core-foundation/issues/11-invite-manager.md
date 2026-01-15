@@ -50,6 +50,7 @@ Manages pending party invitations with automatic expiration. Decoupled from Part
 
 ## Resources
 
-- [ADR-0003: Party-Claim Relationship](.meatware/adr/0003-party-claim-relationship.md)
+- [ADR-0003: Party-Claim Relationship](/.meatware/adr/0003-party-claim-relationship.md)
 - [HytaleDocs - Server Internals](https://hytale-docs.com/docs/api/server-internals) — Scheduled task and timing patterns
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Plugin architecture patterns
+- [HytaleDocs - Plugin Lifecycle](https://hytale-docs.com/docs/modding/plugins/plugin-lifecycle) — TaskRegistry for scheduled tasks

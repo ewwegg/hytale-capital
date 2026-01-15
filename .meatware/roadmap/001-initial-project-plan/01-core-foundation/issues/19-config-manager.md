@@ -36,9 +36,10 @@ Configuration system for server operators to customize plugin behavior. Provides
 
 ## Technical Constraints
 
-- **Spike Finding**: Register config before `preLoad()`, load in `preLoad()`. See [spike-plugin-lifecycle-hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
+- **Spike Finding**: Register config in constructor using `withConfig()`, load in `preLoad()`. See [spike-plugin-lifecycle-hooks](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
 - **Format**: JSON file for consistency with other storage
 - **Gson**: Use Gson 2.10.1 for serialization
+- **Codec System**: Consider Hytale's built-in Codec system for config registration
 
 ## Workflow
 
@@ -58,7 +59,7 @@ Configuration system for server operators to customize plugin behavior. Provides
 
 ## Resources
 
-- [Spike: Plugin Lifecycle Hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
-- [Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual) — Server configuration patterns
+- [Spike: Plugin Lifecycle Hooks](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
+- [HytaleDocs - Plugin Lifecycle](https://hytale-docs.com/docs/modding/plugins/plugin-lifecycle) — withConfig() and preLoad() config registration
 - [Britakee's GitBook](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Config loading and codec system
-- [HytaleDocs - Plugin Lifecycle](https://hytale-docs.com/docs/modding/plugins/plugin-lifecycle) — Config registration in preLoad()
+- [Tech Stack Reference](/.meatware/references/tech-stack.md) — Configuration file locations

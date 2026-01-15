@@ -30,8 +30,9 @@ The main plugin class that Hytale loads. Establishes lifecycle hooks for initial
 
 ## Technical Constraints
 
-- **Spike Finding**: Use lifecycle methods `preLoad()`, `setup()`, `start()`, `shutdown()` per [spike-plugin-lifecycle-hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
+- **Spike Finding**: Use lifecycle methods `preLoad()`, `setup()`, `start()`, `shutdown()` per [spike-plugin-lifecycle-hooks](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
 - **Constructor**: Must accept `JavaPluginInit` parameter
+- **Plugin Descriptor**: Create `manifest.json` in resources root with plugin ID, name, version, and entry point class
 
 ## Workflow
 
@@ -49,8 +50,8 @@ The main plugin class that Hytale loads. Establishes lifecycle hooks for initial
 
 ## Resources
 
-- [Spike: Plugin Lifecycle Hooks](.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
-- [HytaleDocs - Plugin Lifecycle](https://hytale-docs.com/docs/modding/plugins/plugin-lifecycle)
+- [Spike: Plugin Lifecycle Hooks](/.meatware/roadmap/001-initial-project-plan/01-core-foundation/spikes/spike-plugin-lifecycle-hooks.md)
+- [HytaleDocs - Plugin Lifecycle](https://hytale-docs.com/docs/modding/plugins/plugin-lifecycle) — Plugin states (NONE, SETUP, START, ENABLED, SHUTDOWN, DISABLED)
 - [Britakee's GitBook - Plugin Basics](https://britakee-studios.gitbook.io/hytale-modding-documentation) — Comprehensive plugin tutorials
 - [HytaleModding.dev - Creating Plugins](https://hytalemodding.dev/en/docs/guides/plugin) — Community plugin guide
-- [Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual) — Official server documentation
+- [Britakee's Template Plugin](https://github.com/realBritakee/hytale-template-plugin) — Reference implementation structure
